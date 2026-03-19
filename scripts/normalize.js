@@ -31,7 +31,7 @@ const photos = raw
       lng: p.GPSLongitude ?? DEFAULT_LNG,
       datum: date,
       jaar: year,
-      bestand: "./" + file,
+      bestand: "./pictures/" + name + ".jpg",
       captivity: captivity,
       gender: gender,
       rating: p.Rating
