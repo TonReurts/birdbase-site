@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vogelfoto’s</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- MarkerCluster -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+  />
+
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <input
+    id="search"
+    type="search"
+    placeholder="Zoek op soort..."
+    autocomplete="off"
+  />
+  <button id="wild-filter" class="wild-filter-btn" title="Toon alleen wilde vogels">🦅</button>
+  <button id="gender-filter" class="gender-filter-btn" title="Filter op geslacht">-</button>
+  <button id="rating-filter" class="rating-filter-btn" title="Filter op beoordeling">5</button>
+  <div id="map"></div>
+
+  <!-- Photo modal -->
+  <div id="photo-modal" class="photo-modal" aria-hidden="true">
+    <button id="photo-modal-close" class="photo-modal-close" aria-label="Sluiten">✕</button>
+    <img id="photo-modal-img" src="" alt="Grote foto" />
+  </div>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="src/map.js"></script>
+  
+</body>
+</html>
