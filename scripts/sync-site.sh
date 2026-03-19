@@ -80,10 +80,10 @@ echo -e "${GREEN}Sync complete!${NC}"
 
 items_to_sync=(
     "data"
-    "scr"
+    "src"
     "styles"
+    "pictures"
     "index.html"  # root bestand
-    ""  # root bestand
 )
 
 for item in "${items_to_sync[@]}"; do
