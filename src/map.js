@@ -74,30 +74,6 @@ if (ratingFilterBtn) {
   });
 }
 
-// Progress button - update count from soorten.json
-function updateProgressButtonCount() {
-  if (progressBtn) {
-    fetch("./data/soorten.json")
-      .then(res => res.json())
-      .then(soorten => {
-        const clubVan200 = soorten["Club van 200"];
-        const selectedCount = Object.values(clubVan200).filter(v => v === true).length;
-        progressBtn.textContent = selectedCount;
-      })
-      .catch(err => console.error("Fout bij laden selectiegegevens", err));
-  }
-}
-
-// Update progress button on page load
-updateProgressButtonCount();
-
-// Also update progress when returning from selection page (visibilitychange event)
-document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'visible') {
-    updateProgressButtonCount();
-  }
-});
-
 // 1. Kaart initialiseren (tijdelijk midden NL)
 const map = L.map("map", {
   zoomControl: true
