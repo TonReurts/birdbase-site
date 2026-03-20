@@ -144,24 +144,53 @@ const photoModalClose = document.getElementById("photo-modal-close");
 
 function openPhoto(url) {
   if (!photoModal || !photoModalImg) return window.open(url, "_blank");
-  photoModalImg.src = url;
-  photoModal.classList.add("open");
-  photoModal.setAttribute("aria-hidden", "false");
   
-  // Hide UI elements
-  document.getElementById("search")?.classList.add("hidden");
-  document.getElementById("wild-filter")?.classList.add("hidden");
-  document.getElementById("gender-filter")?.classList.add("hidden");
-  document.getElementById("rating-filter")?.classList.add("hidden");
-  document.getElementById("progress")?.classList.add("hidden");
-  document.body.style.overflow = "hidden";
+  // Load image to detect dimensions
+  const img = new Image();
+  img.onload = function() {
+    photoModalImg.src = url;
+    photoModal.classList.add("open");
+    photoModal.setAttribute("aria-hidden", "false");
+    
+    // Detect landscape images (width > height)
+    const isLandscape = img.width > img.height;
+    photoModal.classList.toggle("landscape", isLandscape);
+    
+    // Try to lock device orientation to landscape for landscape images
+    if (isLandscape && screen.orientation && screen.orientation.lock) {
+      screen.orientation.lock("landscape").catch(err => {
+        console.log("Could not lock orientation:", err);
+      });
+    }
+    
+    // Hide UI elements
+    document.getElementById("search")?.classList.add("hidden");
+    document.getElementById("wild-filter")?.classList.add("hidden");
+    document.getElementById("gender-filter")?.classList.add("hidden");
+    document.getElementById("rating-filter")?.classList.add("hidden");
+    document.getElementById("progress")?.classList.add("hidden");
+    document.body.style.overflow = "hidden";
+  };
+  img.onerror = function() {
+    // Fallback if image fails to load
+    photoModalImg.src = url;
+    photoModal.classList.add("open");
+    photoModal.setAttribute("aria-hidden", "false");
+  };
+  img.src = url;
 }
 
 function closePhoto() {
   if (!photoModal) return;
   photoModal.classList.remove("open");
+  photoModal.classList.remove("landscape");
   photoModal.setAttribute("aria-hidden", "true");
   if (photoModalImg) photoModalImg.src = "";
+  
+  // Unlock orientation when closing
+  if (screen.orientation && screen.orientation.unlock) {
+    screen.orientation.unlock();
+  }
   
   // Show UI elements
   document.getElementById("search")?.classList.remove("hidden");
