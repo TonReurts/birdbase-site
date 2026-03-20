@@ -50,15 +50,13 @@ html, body {
   box-shadow: none;
   border-radius: 0;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-/* Landscape image optimization */
-.photo-modal.landscape {
-  flex-direction: row;
-}
-
-@media (orientation: landscape) {
+/* Rotate landscape images in portrait orientation */
+@media (orientation: portrait) {
   .photo-modal.landscape img {
+    transform: rotate(90deg);
     max-width: 100vh;
     max-height: 100vw;
   }

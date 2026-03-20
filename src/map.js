@@ -156,13 +156,6 @@ function openPhoto(url) {
     const isLandscape = img.width > img.height;
     photoModal.classList.toggle("landscape", isLandscape);
     
-    // Try to lock device orientation to landscape for landscape images
-    if (isLandscape && screen.orientation && screen.orientation.lock) {
-      screen.orientation.lock("landscape").catch(err => {
-        console.log("Could not lock orientation:", err);
-      });
-    }
-    
     // Hide UI elements
     document.getElementById("search")?.classList.add("hidden");
     document.getElementById("wild-filter")?.classList.add("hidden");
@@ -186,11 +179,6 @@ function closePhoto() {
   photoModal.classList.remove("landscape");
   photoModal.setAttribute("aria-hidden", "true");
   if (photoModalImg) photoModalImg.src = "";
-  
-  // Unlock orientation when closing
-  if (screen.orientation && screen.orientation.unlock) {
-    screen.orientation.unlock();
-  }
   
   // Show UI elements
   document.getElementById("search")?.classList.remove("hidden");
