@@ -156,6 +156,11 @@ function openPhoto(url) {
     const isLandscape = img.width > img.height;
     photoModal.classList.toggle("landscape", isLandscape);
     
+    // Disable screen rotation for landscape images
+    if (isLandscape && screen.orientation?.lock) {
+      screen.orientation.lock('landscape').catch(err => console.log('Screen lock failed:', err));
+    }
+    
     // Hide UI elements
     document.getElementById("search")?.classList.add("hidden");
     document.getElementById("wild-filter")?.classList.add("hidden");
@@ -187,6 +192,11 @@ function closePhoto() {
   document.getElementById("rating-filter")?.classList.remove("hidden");
   document.getElementById("progress")?.classList.remove("hidden");
   document.body.style.overflow = "";
+  
+  // Re-enable screen rotation
+  if (screen.orientation?.unlock) {
+    screen.orientation.unlock();
+  }
 }
 
 if (photoModalClose) photoModalClose.addEventListener("click", closePhoto);
