@@ -4,6 +4,7 @@
 # - Moves new files from source to target
 # - Deletes files in target that don't exist in source
 # - Overwrites files in target if size has changed
+# - Creates JSON data and syncs site to server
 
 source_dir="/Volumes/Foto's/Capture One/site export"
 site_base="/Volumes/Documenten/GitRepositories/birdbase-site"
