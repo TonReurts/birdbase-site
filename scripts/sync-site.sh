@@ -73,11 +73,10 @@ for target_file in "$target_dir"/*; do
     fi
 done
 
-echo ""
-echo -e "${GREEN}Sync complete!${NC}"
-
+echo -e "${GREEN}Creating JSON data...${NC}"
 ./scripts/create-json.sh
 
+echo -e "${GREEN}Syncing site to server...${NC}"
 items_to_sync=(
     "data"
     "src"
@@ -101,3 +100,6 @@ for item in "${items_to_sync[@]}"; do
             reurts.com@ssh.strato.com:~/htdocs/
     fi
 done
+
+echo ""
+echo -e "${GREEN}Sync complete!${NC}"
