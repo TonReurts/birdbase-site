@@ -7,6 +7,7 @@ const searchInput = document.getElementById("search");
 const wildFilterBtn = document.getElementById("wild-filter");
 const genderFilterBtn = document.getElementById("gender-filter");
 const ratingFilterBtn = document.getElementById("rating-filter");
+const clearSearchBtn = document.getElementById("clear-search");
 const progressBtn = document.getElementById("progress");
 
 // Map gender symbols to potential data formats
@@ -33,6 +34,14 @@ const applyAllFilters = (query = "") => {
 searchInput.addEventListener("input", () => {
   applyAllFilters();
 });
+
+// Clear search button
+if (clearSearchBtn) {
+  clearSearchBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    applyAllFilters();
+  });
+}
 
 // Wild filter button
 if (wildFilterBtn) {
