@@ -431,8 +431,8 @@
 },
 {
   "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/_DSC3022.jpg",
-  "GPSLatitude": 52.4983866666667,
-  "GPSLongitude": 4.657425,
+  "GPSLatitude": 52.46935,
+  "GPSLongitude": 4.56852,
   "DateTimeOriginal": "2020:11:07 12:25:39",
   "Subject": "Kauw",
   "Description": "                               ",
@@ -3374,6 +3374,46 @@
   "Rating": 5
 },
 {
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07309.jpg",
+  "GPSLatitude": 52.5065883333333,
+  "GPSLongitude": 4.838675,
+  "DateTimeOriginal": "2026:03:14 14:57:36",
+  "Subject": "Nijlgans",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07325.jpg",
+  "GPSLatitude": 52.5074683333333,
+  "GPSLongitude": 4.805245,
+  "DateTimeOriginal": "2026:03:14 16:01:50",
+  "Subject": "Scholekster",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07335.jpg",
+  "GPSLatitude": 52.48222,
+  "GPSLongitude": 4.572155,
+  "DateTimeOriginal": "2026:03:22 15:25:32",
+  "Subject": "Steenloper",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07343.jpg",
+  "GPSLatitude": 52.4687266666667,
+  "GPSLongitude": 4.54542666666667,
+  "DateTimeOriginal": "2026:03:22 15:54:10",
+  "Subject": "Oeverpieper",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 4
+},
+{
   "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07356.jpg",
   "GPSLatitude": 52.5409433333333,
   "GPSLongitude": 4.68360833333333,
@@ -3384,11 +3424,51 @@
   "Rating": 5
 },
 {
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07362.jpg",
+  "GPSLatitude": 52.9634066666667,
+  "GPSLongitude": 4.77869166666667,
+  "DateTimeOriginal": "2026:03:27 10:37:08",
+  "Subject": "Kokmeeuw",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07419.jpg",
+  "GPSLatitude": 52.991455,
+  "GPSLongitude": 4.78292666666667,
+  "DateTimeOriginal": "2026:03:27 10:46:08",
+  "Subject": "Kleine mantelmeeuw",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07442.jpg",
+  "GPSLatitude": 53.0091433333333,
+  "GPSLongitude": 4.74601833333333,
+  "DateTimeOriginal": "2026:03:27 11:23:43",
+  "Subject": "Bruine kiekendief",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 3
+},
+{
   "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07446.jpg",
   "GPSLatitude": 52.5350233333333,
   "GPSLongitude": 4.69810166666667,
   "DateTimeOriginal": "2023:04:02 19:03:14",
   "Subject": "Gele kwikstaart",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07475.jpg",
+  "GPSLatitude": 53.0038183333333,
+  "GPSLongitude": 4.74678666666667,
+  "DateTimeOriginal": "2026:03:27 12:45:19",
+  "Subject": "Zilvermeeuw",
   "Description": "                               ",
   "Caption-Abstract": "                               ",
   "Rating": 5
@@ -3414,6 +3494,26 @@
   "Rating": 4
 },
 {
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07650.jpg",
+  "GPSLatitude": 53.0889133333333,
+  "GPSLongitude": 4.89955666666667,
+  "DateTimeOriginal": "2026:03:28 10:53:16",
+  "Subject": "Kluut",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07659.jpg",
+  "GPSLatitude": 53.0889133333333,
+  "GPSLongitude": 4.89955666666667,
+  "DateTimeOriginal": "2026:03:28 10:53:33",
+  "Subject": "Grote stern",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
   "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07669.jpg",
   "GPSLatitude": 52.5611183333333,
   "GPSLongitude": 4.61032666666667,
@@ -3422,6 +3522,16 @@
   "Description": "Man",
   "Caption-Abstract": "Man",
   "Rating": 4
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07678.jpg",
+  "GPSLatitude": 53.0865816666667,
+  "GPSLongitude": 4.89948833333333,
+  "DateTimeOriginal": "2026:03:28 11:10:42",
+  "Subject": "Watersnip",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
 },
 {
   "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07692.jpg",
@@ -3460,6 +3570,36 @@
   "Description": "                               ",
   "Caption-Abstract": "                               ",
   "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07744.jpg",
+  "GPSLatitude": 53.076805,
+  "GPSLongitude": 4.89289833333333,
+  "DateTimeOriginal": "2026:03:28 11:48:49",
+  "Subject": "Wulp",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07752.jpg",
+  "GPSLatitude": 53.0602233333333,
+  "GPSLongitude": 4.87226666666667,
+  "DateTimeOriginal": "2026:03:28 12:00:34",
+  "Subject": "Oeverloper",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 5
+},
+{
+  "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07773.jpg",
+  "GPSLatitude": 53.1478966666667,
+  "GPSLongitude": 4.88552833333333,
+  "DateTimeOriginal": "2026:03:29 10:19:02",
+  "Subject": "Wilde zwaan",
+  "Description": "                               ",
+  "Caption-Abstract": "                               ",
+  "Rating": 4
 },
 {
   "SourceFile": "/Volumes/Documenten/GitRepositories/birdbase-site/pictures/DSC07781.jpg",
