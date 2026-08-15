@@ -7,7 +7,7 @@
 # - Creates JSON data and syncs site to server
 
 source_dir="/Volumes/Foto's/Capture One/site export"
-site_base="/Volumes/Documenten/GitRepositories/birdbase-site"
+site_base="/Volumes/Docs/GitRepositories/birdbase-site"
 target_dir="$site_base/pictures"
 
 # Color codes for output
@@ -87,15 +87,15 @@ items_to_sync=(
 )
 
 for item in "${items_to_sync[@]}"; do
-    echo "Syncing $item"
-
     if [ -d "$site_base/$item" ]; then
         # is een folder
+        echo "Syncing folder: $item"
         rsync -avz --delete -e "ssh -p 22" \
             "$site_base/$item/" \
             reurts.com@ssh.strato.com:~/htdocs/$item/
     else
         # is een bestand
+        echo "Syncing file: $item"
         rsync -avz -e "ssh -p 22" \
             "$site_base/$item" \
             reurts.com@ssh.strato.com:~/htdocs/

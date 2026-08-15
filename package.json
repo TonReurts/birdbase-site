@@ -1,0 +1,11 @@
+{
+  "name": "birdbase-site",
+  "version": "1.0.0",
+  "description": "Static site for bird photos",
+  "scripts": {
+    "generate-thumbs": "node scripts/generate-thumbs.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.0"
+  }
+}

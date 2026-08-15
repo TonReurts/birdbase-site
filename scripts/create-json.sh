@@ -1,4 +1,4 @@
-site_base="/Volumes/Documenten/GitRepositories/birdbase-site"
+site_base="/Volumes/Docs/GitRepositories/birdbase-site"
 
 exiftool \
   -json \

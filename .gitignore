@@ -2,4 +2,5 @@
 .gitignore
 .DS_Store
 .vscode
-pictures/
+pictures/*
+data/*

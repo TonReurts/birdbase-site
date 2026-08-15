@@ -120,14 +120,21 @@ function renderMarkers(photos) {
     markers.clearLayers();
     photos.forEach(photo => {
       const marker = L.marker([photo.lat, photo.lng]);
+      // Use a tiny placeholder and defer loading the real thumbnail until popup opens.
+      // If you generate thumbnails under ./pictures/thumbs/, the code will prefer those.
+      const thumbPath = photo.bestand.replace('/pictures/', '/pictures/thumbs/');
+      const placeholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
       const popup = `
         <strong>${photo.soort}</strong><br>
         <img
           class="popup-thumb"
           data-full="${photo.bestand}"
-          src="${photo.bestand}"
+          data-thumb="${thumbPath}"
+          src="${placeholder}"
           alt="${photo.soort}"
+          loading="lazy"
+          decoding="async"
           style="width:100%;max-width:200px;margin-top:4px;cursor:pointer;"
         />
       `;
@@ -213,6 +220,20 @@ map.on("popupopen", e => {
     if (!popupEl) return;
     const thumb = popupEl.querySelector(".popup-thumb");
     if (thumb) {
+      // Load thumbnail on-demand. If a thumb 404s, fall back to the full image.
+      if (!thumb.dataset.loaded) {
+        const thumbSrc = thumb.dataset.thumb || thumb.dataset.full;
+        thumb.onload = () => {
+          thumb.dataset.loaded = "1";
+        };
+        thumb.onerror = () => {
+          if (thumb.dataset.full && thumb.src !== thumb.dataset.full) {
+            thumb.src = thumb.dataset.full;
+          }
+        };
+        thumb.src = thumbSrc;
+      }
+
       thumb.addEventListener("click", () => openPhoto(thumb.dataset.full));
     }
   } catch (err) {
